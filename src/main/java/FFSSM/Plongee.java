@@ -5,6 +5,7 @@ package FFSSM;
 
 import java.time.LocalDate;
 import java.util.HashSet;
+import java.util.Optional;
 import java.util.Set;
 
 public class Plongee {
@@ -18,6 +19,8 @@ public class Plongee {
 	public int profondeur;
 
 	public int duree;
+	
+	public Set<Optional<Licence>> palanquee = new HashSet<Optional<Licence>>();
 
 	public Plongee(Site lieu, Moniteur chefDePalanquee, LocalDate date, int profondeur, int duree) {
 		this.lieu = lieu;
