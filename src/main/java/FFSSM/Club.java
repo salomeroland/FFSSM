@@ -18,6 +18,7 @@ public class Club {
     public String telephone;
 
     public Set<Plongee> activites = new HashSet<Plongee>(); 
+    public Set<Licence> lesLicences = new HashSet<Licence>(); 
     
     public Club(Moniteur président, String nom, String adresse, String telephone) {
         this.president = président;
@@ -49,6 +50,10 @@ public class Club {
      */
     public void organisePlongee(Plongee p) {
          activites.add(p); 
+    }
+    
+    public void ajouterLicence(Licence l){
+        lesLicences.add(l);
     }
     
     
@@ -83,8 +88,28 @@ public class Club {
     public void setTelephone(String telephone) {
         this.telephone = telephone;
     }
+    
+    
 
-    @Override
+    public Set<Plongee> getActivites() {
+		return activites;
+	}
+
+	public void setActivites(Set<Plongee> activites) {
+		this.activites = activites;
+	}
+	
+	
+
+	public Set<Licence> getLesLicences() {
+		return lesLicences;
+	}
+
+	public void setLesLicences(Set<Licence> lesLicences) {
+		this.lesLicences = lesLicences;
+	}
+
+	@Override
     public String toString() {
         return "Club{" + "président=" + president + ", nom=" + nom + ", adresse=" + adresse + ", telephone=" + telephone + '}';
     }
