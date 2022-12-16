@@ -57,6 +57,13 @@ public class Plongee {
 		return res;
 	}
 
+    public Set<Optional<Licence>> getPalanquee() {
+        return palanquee;
+    }
+
+        
+ 
+
 	}
 
 
